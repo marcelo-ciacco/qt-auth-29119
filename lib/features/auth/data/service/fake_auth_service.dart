@@ -9,7 +9,7 @@ class FakeAuthService implements AuthService {
     required String email,
     required String password,
   }) async {
-    await Future.delayed(const Duration(milliseconds: 500));
+    await Future.delayed(const Duration(milliseconds: 3000));
 
     try {
       final user = _users.firstWhere(

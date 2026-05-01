@@ -49,8 +49,10 @@ class SignupViewModel extends ChangeNotifier {
 
       _uiMessage = UiMessage("Cadastro Realizado com sucesso");
       _authNavigationEvent = AuthNavigationEvent.goToLogin;
+      notifyListeners();
     } catch (e) {
       _uiMessage = UiMessage(_extractMessage(e));
+      notifyListeners();
     } finally {
       _setLoading(false);
     }

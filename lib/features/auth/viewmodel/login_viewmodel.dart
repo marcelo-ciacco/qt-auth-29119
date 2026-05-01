@@ -28,8 +28,10 @@ class LoginViewModel extends ChangeNotifier {
     try {
       await repository.login(email: email.trim(), password: password.trim());
       _authNavigationEvent = AuthNavigationEvent.goToHome;
+      notifyListeners();
     } catch (e) {
       _uiMessage = UiMessage(_extractMessage(e));
+      notifyListeners();
     } finally {
       _setLoading(false);
     }
