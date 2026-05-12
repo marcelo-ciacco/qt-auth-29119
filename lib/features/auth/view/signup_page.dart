@@ -138,7 +138,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                       TextButton(
                         onPressed: () => viewModel.goToLogin(),
-                        child: Text("Votlar para login"),
+                        child: Text("Voltar para login"),
                       ),
                     ],
                   ),
